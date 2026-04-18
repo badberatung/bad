@@ -1,0 +1,296 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://barrierefrei-badberatung.de');
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Barrierefreie Badberatung" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content="/images/hero.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/images/hero.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#1c3867" />
+    
+    <!-- Lokale Fonts (DSGVO-konform) -->
+    <link rel="stylesheet" href="/src/styles/fonts.css" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Barrierefreie Badberatung",
+      "description": "Professionelle Beratung für barrierefreie Badsanierung in Osnabrück und Umgebung",
+      "url": "https://barrierefrei-badberatung.de",
+      "telephone": "+4954180067046",
+      "email": "Info@barrierefrei-badberatung.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "In der Dodesheide 2",
+        "addressLocality": "Osnabrück",
+        "postalCode": "49088",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.2799",
+        "longitude": "8.0472"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Osnabrück"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "image": "/images/logo.jpg"
+    }
+    </script>
+    
+    <style is:global>
+      /* Base Styles für Senioren-Gerechtigkeit */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+        word-wrap: break-word;
+      }
+      
+      /* Focus Styles für Accessibility */
+      *:focus-visible {
+        outline: 3px solid #449c9d;
+        outline-offset: 2px;
+      }
+      
+      /* Skip Link für Screen Reader */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #1c3867;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        z-index: 100;
+      }
+      
+      .skip-link:focus {
+        top: 0;
+      }
+      
+      /* Cookie Banner Styles */
+      .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #1c3867;
+        color: white;
+        padding: 1.5rem;
+        z-index: 9999;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+      
+      .cookie-banner.visible {
+        transform: translateY(0);
+      }
+      
+      .cookie-banner-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .cookie-banner-text {
+        flex: 1;
+        min-width: 280px;
+      }
+      
+      .cookie-banner-buttons {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      
+      .cookie-btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: 2px solid transparent;
+        min-height: 48px;
+        font-size: 1rem;
+      }
+      
+      .cookie-btn-primary {
+        background: #449c9d;
+        color: white;
+        border-color: #449c9d;
+      }
+      
+      .cookie-btn-primary:hover {
+        background: #5ab0b1;
+        border-color: #5ab0b1;
+      }
+      
+      .cookie-btn-secondary {
+        background: transparent;
+        color: white;
+        border-color: white;
+      }
+      
+      .cookie-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      
+      /* Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  
+  <body class="bg-white text-gray-900 antialiased">
+    <!-- Skip Link für Screen Reader -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    
+    <!-- Hauptinhalt -->
+    <slot />
+    
+    <!-- DSGVO Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+      <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+          <h2 id="cookie-title" class="text-lg font-bold mb-1">Datenschutzeinstellungen</h2>
+          <p id="cookie-desc" class="text-base opacity-90">
+            Wir verwenden nur essentielle Cookies, die für den Betrieb dieser Website notwendig sind. 
+            Personenbezogene Daten werden nur bei aktiver Kontaktaufnahme erhoben.
+          </p>
+        </div>
+        <div class="cookie-banner-buttons">
+          <button 
+            type="button" 
+            class="cookie-btn cookie-btn-primary" 
+            onclick="acceptCookies()"
+            aria-label="Cookies akzeptieren"
+          >
+            Akzeptieren
+          </button>
+          <button 
+            type="button" 
+            class="cookie-btn cookie-btn-secondary" 
+            onclick="declineCookies()"
+            aria-label="Nur essentielle Cookies erlauben"
+          >
+            Ablehnen
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Cookie Banner JavaScript -->
+    <script is:inline>
+      (function() {
+        const COOKIE_CONSENT_KEY = 'cookie_consent';
+        const banner = document.getElementById('cookie-banner');
+        
+        // Prüfe ob bereits eine Entscheidung getroffen wurde
+        function getCookieConsent() {
+          try {
+            return localStorage.getItem(COOKIE_CONSENT_KEY);
+          } catch (e) {
+            return null;
+          }
+        }
+        
+        // Zeige Banner nur wenn keine Entscheidung vorliegt
+        function initCookieBanner() {
+          const consent = getCookieConsent();
+          if (!consent) {
+            // Kurze Verzögerung für bessere UX
+            setTimeout(() => {
+              banner.classList.add('visible');
+            }, 1000);
+          }
+        }
+        
+        // Cookies akzeptieren
+        window.acceptCookies = function() {
+          try {
+            localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+          } catch (e) {
+            console.warn('LocalStorage nicht verfügbar');
+          }
+          banner.classList.remove('visible');
+        };
+        
+        // Cookies ablehnen (nur essentielle)
+        window.declineCookies = function() {
+          try {
+            localStorage.setItem(COOKIE_CONSENT_KEY, 'declined');
+          } catch (e) {
+            console.warn('LocalStorage nicht verfügbar');
+          }
+          banner.classList.remove('visible');
+        };
+        
+        // Initialisierung
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initCookieBanner);
+        } else {
+          initCookieBanner();
+        }
+      })();
+    </script>
+  </body>
+</html>

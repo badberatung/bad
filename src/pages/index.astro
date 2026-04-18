@@ -1,0 +1,852 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Barrierefreie Badberatung Osnabrück | Sicherheit & Komfort im eigenen Bad";
+const pageDescription = "Professionelle Beratung für barrierefreie Badsanierung in Osnabrück. Bodengleiche Duschen, Haltegriffe, rutschfeste Böden – mit bis zu 4.180 € Pflegekassenzuschuss. Kostenlose Erstberatung!";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Header />
+  
+  <main id="main-content">
+    
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section 
+      class="relative bg-gradient-to-br from-primary via-primary to-primary-dark text-white py-16 lg:py-24 overflow-hidden"
+      aria-labelledby="hero-title"
+    >
+      <!-- Hintergrund Pattern -->
+      <div class="absolute inset-0 opacity-10" aria-hidden="true">
+        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.5" fill="white"/>
+          </pattern>
+          <rect width="100" height="100" fill="url(#grid)"/>
+        </svg>
+      </div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          
+          <!-- Text Content -->
+          <div class="text-center lg:text-left">
+            <!-- Badge: Pflegekassenzuschuss -->
+            <div class="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 rounded-full px-5 py-2.5 mb-6">
+              <svg class="w-5 h-5 text-secondary-light" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="font-semibold text-secondary-light">
+                Bis zu 4.180 € Pflegekassenzuschuss möglich!
+              </span>
+            </div>
+            
+            <h1 
+              id="hero-title" 
+              class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+            >
+              Sicherheit & Komfort <span class="text-secondary">im eigenen Bad</span>
+            </h1>
+            
+            <p class="text-xl lg:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Barrierefreie Badmodernisierung für ein selbstbestimmtes Leben. 
+              Wir machen Ihr Bad sicher – damit Sie lange selbstständig zu Hause leben können.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a 
+                href="tel:+4954180067046" 
+                class="inline-flex items-center justify-center gap-3 bg-secondary hover:bg-secondary-dark text-white font-bold text-xl px-8 py-5 rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl min-h-touch min-w-touch"
+                aria-label="Jetzt kostenlos anrufen"
+              >
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                Jetzt anrufen
+              </a>
+              
+              <a 
+                href="#kontakt" 
+                class="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-primary font-bold text-xl px-8 py-5 rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl min-h-touch min-w-touch"
+                aria-label="Nachricht über Kontaktformular schreiben"
+              >
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                Nachricht schreiben
+              </a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-gray-400">
+              <div class="flex items-center gap-2">
+                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-medium">Kostenlose Beratung</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-medium">Persönlich vor Ort</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-medium">Zuschuss-Abwicklung</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-medium">3D Planung</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-medium">KW Fördermöglichkeit</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Hero Image -->
+          <div class="relative hidden lg:block">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/hero.png"
+                alt="Modernes, barrierefreies Badezimmer mit bodengleicher Dusche und Haltegriffen"
+                class="w-full h-auto object-cover"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                width="600"
+                height="450"
+              />
+              <!-- Overlay Gradient -->
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" aria-hidden="true"></div>
+            </div>
+            
+            <!-- Floating Badge -->
+            <div class="absolute -bottom-4 -left-4 bg-white text-primary p-4 rounded-xl shadow-xl">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                  <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Zufriedene Kunden</p>
+                  <p class="text-2xl font-bold">100+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- ==========================================
+         PROBLEM / LÖSUNG (VORTEILE)
+         ========================================== -->
+    <section 
+      class="py-16 lg:py-24 bg-gray-50"
+      aria-labelledby="vorteile-title"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block text-secondary font-semibold text-lg mb-3">Unsere Lösungen</span>
+          <h2 id="vorteile-title" class="text-4xl lg:text-5xl font-bold text-primary mb-6">
+            Ihr Bad – sicher und barrierefrei
+          </h2>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Stolpern in der Dusche, Angst beim Ein- und Aussteigen – das muss nicht sein. 
+            Wir zeigen Ihnen, wie Ihr Bad wieder ein Ort der Entspannung wird.
+          </p>
+        </div>
+        
+        <!-- 3-Spalten Grid -->
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+          
+          <!-- Vorteil 1: Bodengleiche Dusche -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full">
+            <img 
+              src="/images/Bodengleich.jpg" 
+              alt="Bodengleiche Dusche statt Badewanne"
+              class="w-full h-48 object-cover rounded-2xl mb-6"
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold text-primary mb-4">Bodengleiche Dusche statt Badewanne</h3>
+            <p class="text-lg text-gray-600 leading-relaxed flex-grow">
+              Keine hohen Einstiege mehr. Eine ebenerdige Dusche ermöglicht einen sicheren,
+              stolperfreien Zugang – perfekt für Rollator und Rollstuhl. Wir machen aus Ihrer
+              Badewanne eine bodengleiche Dusche.
+            </p>
+            <div class="mt-6 pt-6 border-t border-gray-100">
+              <div class="flex items-center gap-2 text-secondary font-semibold">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Einfacher Einstieg</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Vorteil 2: Rutschfeste Materialien -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full">
+            <img 
+              src="/images/rutschfest.jpg" 
+              alt="Rutschfeste Materialien"
+              class="w-full h-48 object-cover rounded-2xl mb-6"
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold text-primary mb-4">Rutschfeste Materialien</h3>
+            <p class="text-lg text-gray-600 leading-relaxed flex-grow">
+              Spezielle Fliesen und Bodenbeläge mit Rutschhemmung R10/R11 sorgen für sicheren 
+              Halt – auch bei Seifenwasser. Moderne Designs, die Sicherheit mit Ästhetik verbinden.
+            </p>
+            <div class="mt-6 pt-6 border-t border-gray-100">
+              <div class="flex items-center gap-2 text-secondary font-semibold">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Sicherer Halt garantiert</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Vorteil 3: Haltegriffe -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full">
+            <img 
+              src="/images/Haltegriffe.jpg" 
+              alt="Haltegriffe und Sicherheit"
+              class="w-full h-48 object-cover rounded-2xl mb-6"
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold text-primary mb-4">Haltegriffe & Sicherheit</h3>
+            <p class="text-lg text-gray-600 leading-relaxed flex-grow">
+              Strategisch platzierte Haltegriffe gehaltenen Halt beim Duschen und Toilettengang. 
+              Klappbar oder fest montiert – wir finden die beste Lösung für Ihren Alltag.
+            </p>
+            <div class="mt-6 pt-6 border-t border-gray-100">
+              <div class="flex items-center gap-2 text-secondary font-semibold">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Mehr Selbstständigkeit</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Zusätzliche Features -->
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="flex items-center gap-4 bg-white p-5 rounded-xl shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary">Höhenverstellbare Waschtische</h4>
+              <p class="text-gray-600 text-base">Bequem im Sitzen oder Stehen</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4 bg-white p-5 rounded-xl shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary">Duschabtrennung faltbar</h4>
+              <p class="text-gray-600 text-base">Mehr Platz beim Duschen durch faltbare Duschabtrennung</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4 bg-white p-5 rounded-xl shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary">Mehr Komfort und Sicherheit bei der Toilettennutzung</h4>
+              <p class="text-gray-600 text-base">Versetzen und erhöhen der Toilette für ergonomisches Sitzen</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ==========================================
+         ZUSCHUSS-ERKLÄRUNG (WICHTIG!)
+         ========================================== -->
+    <section 
+      class="py-16 lg:py-24 bg-white"
+      aria-labelledby="zuschuss-title"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <!-- Text Content -->
+          <div>
+            <div class="inline-flex items-center gap-2 bg-green-100 text-green-800 rounded-full px-5 py-2 mb-6">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+              </svg>
+              <span class="font-semibold">Staatliche Förderung nutzen</span>
+            </div>
+            
+            <h2 id="zuschuss-title" class="text-4xl lg:text-5xl font-bold text-primary mb-6">
+              Bis zu 4.180 € Zuschuss von der Pflegekasse
+            </h2>
+            
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+              Wussten Sie, dass die Pflegekasse bei einer wohnumfeldverbessernden Maßnahme
+              <strong class="text-primary">bis zu 4.180 € pro Person</strong> bezuschusst?
+              Das ist kein Darlehen – Sie müssen nichts zurückzahlen!
+            </p>
+            
+            <!-- Schritte -->
+            <div class="space-y-6">
+              
+              <div class="flex gap-5">
+                <div class="flex-shrink-0 w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  1
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary mb-2">Pflegegrad prüfen lassen</h3>
+                  <p class="text-lg text-gray-600">
+                    Sie oder Ihr Angehöriger benötigen mindestens Pflegegrad 1.
+                    Falls noch nicht vorhanden, helfe ich bei der Beantragung.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex gap-5">
+                <div class="flex-shrink-0 w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  2
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary mb-2">Kostenlose Beratung</h3>
+                  <p class="text-lg text-gray-600">
+                    Ich besuche Sie vor Ort, begutachte Ihr Bad und erstelle ein
+                    unverbindliches Konzept.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex gap-5">
+                <div class="flex-shrink-0 w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  3
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary mb-2">Antrag einreichen</h3>
+                  <p class="text-lg text-gray-600">
+                    Ich helfe Ihnen bei der korrekten Ausfüllung aller Formulare 
+                    und reiche den Antrag bei Ihrer Pflegekasse ein.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex gap-5">
+                <div class="flex-shrink-0 w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-xl">
+                  4
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary mb-2">Zuschuss erhalten & loslegen</h3>
+                  <p class="text-lg text-gray-600">
+                    Nach Bewilligung durch die Pflegekasse wird der Zuschuss direkt 
+                    an Sie ausgezahlt.
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+            
+            <!-- CTA -->
+            <div class="mt-10">
+              <a 
+                href="tel:+4954180067046" 
+                class="inline-flex items-center gap-3 bg-secondary hover:bg-secondary-dark text-white font-bold text-xl px-8 py-5 rounded-xl transition-all shadow-lg hover:shadow-xl min-h-touch"
+                aria-label="Kostenlose Beratung zum Pflegekassenzuschuss anrufen"
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                Gratis beraten lassen
+              </a>
+            </div>
+            
+          </div>
+          
+          <!-- Image -->
+          <div class="relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/images/beratung.png" 
+                alt="Beratungsgespräch zur Pflegekassenzuschuss-Beantragung"
+                class="w-full h-auto object-cover"
+                loading="lazy"
+                width="600"
+                height="500"
+              />
+            </div>
+            
+            <!-- Info Box -->
+            <div class="mt-6 bg-primary text-white p-6 rounded-xl shadow-xl">
+              <div class="flex items-start gap-4">
+                <svg class="w-8 h-8 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Wichtig zu wissen:</h4>
+                  <ul class="space-y-2 text-gray-200">
+                    <li class="flex items-start gap-2">
+                      <span class="text-secondary">✓</span>
+                      <span>Der Zuschuss gilt pro pflegebedürftiger Person im Haushalt</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-secondary">✓</span>
+                      <span>Auch für Ehepartner/Angehörige mit Pflegegrad</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-secondary">✓</span>
+                      <span>KW Zuschüsse (455-B) können beantragt werden</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ==========================================
+         ÜBER DEN INHABER
+         ========================================== -->
+    <section 
+      class="py-16 lg:py-24 bg-gray-50"
+      aria-labelledby="ueber-title"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <!-- Portrait Image -->
+          <div class="order-2 lg:order-1">
+            <div class="relative max-w-md mx-auto lg:mx-0">
+              <!-- Decorative Elements -->
+              <div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary/20 rounded-full" aria-hidden="true"></div>
+              <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full" aria-hidden="true"></div>
+              
+              <!-- Image Container -->
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/uberuns.jpg"
+                  alt="Barrierefreie Badberatung in Osnabrück - Professionelle Badsanierung mit Pflegekassenzuschuss"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                  width="500"
+                  height="600"
+                />
+              </div>
+              
+
+            </div>
+          </div>
+          
+          <!-- Text Content -->
+          <div class="order-1 lg:order-2">
+            <span class="inline-block text-secondary font-semibold text-lg mb-3">Ihr Ansprechpartner vor Ort</span>
+            <h2 id="ueber-title" class="text-4xl lg:text-5xl font-bold text-primary mb-6">
+              Ihr Berater in Osnabrück
+            </h2>
+
+            <div class="prose prose-lg text-gray-600 mb-8">
+              <p class="text-xl leading-relaxed mb-6">
+                Herzlich willkommen! Ich helfe Senioren und
+                pflegebedürftigen Menschen in Osnabrück und Umgebung dabei, ihr Bad sicher
+                und komfortabel zu gestalten.
+              </p>
+
+              <p class="leading-relaxed mb-6">
+                Bei mir erwarten Sie eine ehrliche Beratung. Ich nehme mir Zeit, höre Ihnen zu und entwickle
+                gemeinsam mit Ihnen die beste Lösung für Ihre Situation.
+              </p>
+
+              <p class="leading-relaxed mb-6">
+                Ich bin als Vermittler tätig und vermittle passende Anbieter.
+              </p>
+
+              <p class="leading-relaxed">
+                Nach jahrelanger Erfahrung im Baugewerbe habe ich mich auf die Bedürfnisse
+                älterer Menschen spezialisiert. Ich weiß, wie wichtig es ist, trotz körperlicher
+                Einschränkungen selbstbestimmt zu Hause leben zu können.
+              </p>
+            </div>
+
+            <!-- Qualifikationen -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="flex items-center gap-3 bg-white p-4 rounded-xl shadow">
+                <svg class="w-6 h-6 text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-medium text-primary">Ihr Experte für Zuschüsse</span>
+              </div>
+
+              <div class="flex items-center gap-3 bg-white p-4 rounded-xl shadow">
+                <svg class="w-6 h-6 text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-medium text-primary">100+ zufriedene Kunden</span>
+              </div>
+
+              <div class="flex items-center gap-3 bg-white p-4 rounded-xl shadow">
+                <svg class="w-6 h-6 text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="font-medium text-primary">Lokal & Persönlich</span>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ==========================================
+         KONTAKT SECTION
+         ========================================== -->
+    <section 
+      id="kontakt"
+      class="py-16 lg:py-24 bg-primary text-white"
+      aria-labelledby="kontakt-title"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block text-secondary-light font-semibold text-lg mb-3">Kontakt</span>
+          <h2 id="kontakt-title" class="text-4xl lg:text-5xl font-bold mb-6">
+            Lassen Sie uns sprechen
+          </h2>
+          <p class="text-xl text-gray-300 leading-relaxed">
+            Rufen Sie mich direkt an oder schreiben Sie mir eine Nachricht. 
+            Ich melde mich innerhalb von 24 Stunden bei Ihnen.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          
+          <!-- Kontaktformular -->
+          <div class="bg-white text-gray-900 rounded-2xl p-8 lg:p-10 shadow-2xl">
+            <h3 class="text-2xl font-bold text-primary mb-6">Nachricht schreiben</h3>
+            
+            <form 
+              action="https://api.web3forms.com/submit" 
+              method="POST"
+              class="space-y-6"
+              aria-label="Kontaktformular"
+            >
+              <!-- Web3Forms Access Key -->
+              <input type="hidden" name="access_key" value="73ea3a14-05ca-4997-8c1a-10fba25bebed" />
+              
+              <!-- Honeypot Spamschutz -->
+              <input 
+                type="checkbox" 
+                name="botcheck" 
+                class="hidden" 
+                style="display: none;"
+                aria-hidden="true"
+                tabindex="-1"
+                autocomplete="off"
+              />
+              
+              <!-- Weiterleitung nach Absenden -->
+              <input type="hidden" name="redirect" value="https://barrierefrei-badberatung.de/danke" />
+              
+              <!-- Betreff -->
+              <input type="hidden" name="subject" value="Neue Anfrage über die Website" />
+              
+              <!-- Von -->
+              <input type="hidden" name="from_name" value="Barrierefrei Badberatung Website" />
+              
+              <!-- Name -->
+              <div>
+                <label for="name" class="block text-lg font-semibold text-primary mb-2">
+                  Ihr Name <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="name"
+                  name="name" 
+                  required
+                  class="w-full px-5 py-4 text-lg border-2 border-gray-200 rounded-xl focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors min-h-touch"
+                  placeholder="Max Mustermann"
+                  autocomplete="name"
+                />
+              </div>
+              
+              <!-- Telefonnummer -->
+              <div>
+                <label for="phone" class="block text-lg font-semibold text-primary mb-2">
+                  Telefonnummer <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  pattern="[0-9\s\+\-\(\)]{6,}"
+                  title="Bitte geben Sie eine gültige Telefonnummer ein (mindestens 6 Ziffern)"
+                  class="w-full px-5 py-4 text-lg border-2 border-gray-200 rounded-xl focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors min-h-touch"
+                  placeholder="0541 12345678"
+                  autocomplete="tel"
+                />
+                <p class="text-base text-gray-500 mt-2">Ich rufe Sie gerne zurück.</p>
+              </div>
+              
+              <!-- E-Mail (optional) -->
+              <div>
+                <label for="email" class="block text-lg font-semibold text-primary mb-2">
+                  E-Mail <span class="text-gray-400 font-normal">(optional)</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email"
+                  name="email" 
+                  class="w-full px-5 py-4 text-lg border-2 border-gray-200 rounded-xl focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors min-h-touch"
+                  placeholder="max@beispiel.de"
+                  autocomplete="email"
+                />
+              </div>
+              
+              <!-- Nachricht -->
+              <div>
+                <label for="message" class="block text-lg font-semibold text-primary mb-2">
+                  Ihre Nachricht <span class="text-red-500">*</span>
+                </label>
+                <textarea 
+                  id="message"
+                  name="message" 
+                  rows="5"
+                  required
+                  class="w-full px-5 py-4 text-lg border-2 border-gray-200 rounded-xl focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-colors resize-y"
+                  placeholder="Beschreiben Sie kurz Ihre Situation und was Sie sich wünschen..."
+                ></textarea>
+              </div>
+              
+              <!-- Datenschutz Checkbox -->
+              <div class="flex items-start gap-3">
+                <input 
+                  type="checkbox" 
+                  id="privacy"
+                  name="privacy" 
+                  required
+                  class="w-6 h-6 mt-1 text-secondary border-2 border-gray-300 rounded focus:ring-secondary"
+                />
+                <label for="privacy" class="text-base text-gray-600 leading-relaxed">
+                  Ich habe die <a href="/datenschutz" class="text-secondary hover:underline font-medium" target="_blank">Datenschutzerklärung</a> 
+                  gelesen und stimme der Verarbeitung meiner Daten zu. <span class="text-red-500">*</span>
+                </label>
+              </div>
+              
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full flex items-center justify-center gap-3 bg-secondary hover:bg-secondary-dark text-white font-bold text-xl px-8 py-5 rounded-xl transition-all shadow-lg hover:shadow-xl min-h-touch disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-label="Nachricht absenden"
+              >
+                <svg id="btn-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+                <span id="btn-text">Nachricht absenden</span>
+                <span id="btn-loader" class="hidden flex items-center gap-2">
+                  <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Wird gesendet...
+                </span>
+              </button>
+
+              <!-- Error Message -->
+              <div id="form-error" class="hidden mt-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+                <p class="font-semibold flex items-center gap-2">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                  </svg>
+                  Ein Fehler ist aufgetreten
+                </p>
+                <p class="text-sm mt-1">Bitte versuchen Sie es später erneut oder rufen Sie uns direkt an.</p>
+              </div>
+              
+            </form>
+          </div>
+          
+          <!-- Direkte Kontaktdaten -->
+          <div class="flex flex-col justify-center">
+            
+            <div class="space-y-8">
+              
+              <!-- Telefon CTA -->
+              <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                <div class="flex items-start gap-5">
+                  <div class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-bold mb-2">Telefon</h4>
+                    <p class="text-gray-300 mb-3">Direkt und unkompliziert erreichen</p>
+                    <a 
+                      href="tel:+4954180067046" 
+                      class="text-3xl font-bold text-secondary-light hover:text-white transition-colors"
+                      aria-label="Telefonnummer anrufen"
+                    >
+                      0541 80067046
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- E-Mail -->
+              <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                <div class="flex items-start gap-5">
+                  <div class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-bold mb-2">E-Mail</h4>
+                    <p class="text-gray-300 mb-3">Ich antworte innerhalb von 24h</p>
+                    <a 
+                      href="mailto:Info@barrierefrei-badberatung.de" 
+                      class="text-xl font-semibold text-secondary-light hover:text-white transition-colors break-all"
+                      aria-label="E-Mail senden"
+                    >
+                      Info@barrierefrei-badberatung.de
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Adresse -->
+              <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                <div class="flex items-start gap-5">
+                  <div class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-bold mb-2">Adresse</h4>
+                    <p class="text-gray-300 mb-3">Ihr lokaler Ansprechpartner</p>
+                    <address class="not-italic text-xl">
+                      In der Dodesheide 2<br/>
+                      49088 Osnabrück
+                    </address>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- ==========================================
+         ABSCHLUSS CTA
+         ========================================== -->
+    <section 
+      class="py-12 bg-secondary"
+      aria-label="Call to Action"
+    >
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+          Bereit für ein sicheres Bad?
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Nutzen Sie die kostenlose Erstberatung und erfahren Sie, wie auch Ihr Bad barrierefrei werden kann.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="tel:+4954180067046" 
+            class="inline-flex items-center justify-center gap-3 bg-white text-secondary hover:bg-gray-100 font-bold text-xl px-8 py-5 rounded-xl transition-all shadow-lg min-h-touch"
+            aria-label="Jetzt kostenlos anrufen"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            0541 80067046
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <Footer />
+
+  <script is:inline>
+    // Formular Loading State & Error Handling
+    (function() {
+      const form = document.querySelector('form[action*="web3forms"]');
+      if (!form) return;
+
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+      const btnLoader = document.getElementById('btn-loader');
+      const errorDiv = document.getElementById('form-error');
+
+      form.addEventListener('submit', async function(e) {
+        // Loading State aktivieren
+        if (submitBtn) submitBtn.disabled = true;
+        if (btnText) btnText.classList.add('hidden');
+        if (btnIcon) btnIcon.classList.add('hidden');
+        if (btnLoader) btnLoader.classList.remove('hidden');
+        if (errorDiv) errorDiv.classList.add('hidden');
+
+        // Formular wird normal abgeschickt (kein preventDefault)
+        // Web3Forms übernimmt die Weiterleitung
+      });
+
+      // Fehler-Check beim Zurückkehren (falls Redirect fehlschlägt)
+      window.addEventListener('pageshow', function() {
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnText) btnText.classList.remove('hidden');
+        if (btnIcon) btnIcon.classList.remove('hidden');
+        if (btnLoader) btnLoader.classList.add('hidden');
+      });
+    })();
+  </script>
+</Layout>

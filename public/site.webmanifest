@@ -1,0 +1,16 @@
+{
+  "name": "Barrierefrei Badberatung",
+  "short_name": "Badberatung",
+  "description": "Professionelle Beratung für barrierefreie Badsanierung in Osnabrück",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1c3867",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

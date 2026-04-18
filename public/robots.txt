@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://barrierefrei-badberatung.de/sitemap.xml

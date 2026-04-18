@@ -1,0 +1,123 @@
+---
+// Footer Komponente
+---
+
+<footer class="bg-primary text-white" role="contentinfo">
+  <!-- Haupt-Footer -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+      
+      <!-- Spalte 1: Über uns -->
+      <div class="lg:col-span-2">
+        <h2 class="text-2xl font-bold text-white mb-4">Barrierefreie Badberatung</h2>
+        <p class="text-lg text-gray-300 mb-6 leading-relaxed max-w-xl">
+          Ihr zuverlässiger Partner für barrierefreie Badsanierung in Osnabrück und Umgebung. 
+          Wir helfen Ihnen, Ihr Bad sicher und komfortabel zu gestalten – mit bis zu 4.180 € Zuschuss 
+          von der Pflegekasse.
+        </p>
+        
+
+      </div>
+      
+      <!-- Spalte 2: Kontakt -->
+      <div>
+        <h3 class="text-xl font-bold mb-5">Kontakt</h3>
+        <address class="not-italic space-y-4 text-lg">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-secondary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>
+              In der Dodesheide 2<br/>
+              49088 Osnabrück
+            </span>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <a 
+              href="tel:+4954180067046" 
+              class="hover:text-secondary transition-colors"
+              aria-label="Telefonnummer anrufen"
+            >
+              0541 80067046
+            </a>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <a 
+              href="mailto:Info@barrierefrei-badberatung.de" 
+              class="hover:text-secondary transition-colors"
+              aria-label="E-Mail senden"
+            >
+              Info@barrierefrei-badberatung.de
+            </a>
+          </div>
+        </address>
+      </div>
+      
+      <!-- Spalte 3: Schnelllinks -->
+      <div>
+        <h3 class="text-xl font-bold mb-5">Rechtliches</h3>
+        <nav aria-label="Footer Navigation">
+          <ul class="space-y-3 text-lg">
+            <li>
+              <a 
+                href="/impressum" 
+                class="hover:text-secondary transition-colors flex items-center gap-2"
+              >
+                <span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+                Impressum
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/datenschutz" 
+                class="hover:text-secondary transition-colors flex items-center gap-2"
+              >
+                <span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+                Datenschutz
+              </a>
+            </li>
+          </ul>
+        </nav>
+        
+        <!-- Öffnungszeiten -->
+        <div class="mt-8 pt-6 border-t border-white/20">
+          <h4 class="font-semibold mb-3 flex items-center gap-2">
+            <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Erreichbarkeit
+          </h4>
+          <p class="text-gray-300">
+            Mo – Fr: 08:00 – 18:00 Uhr<br/>
+            <span class="text-secondary font-medium">Termine nach Vereinbarung</span>
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Copyright Bar -->
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-base text-gray-400">
+        <p>
+          © {new Date().getFullYear()} Barrierefreie Badberatung. Alle Rechte vorbehalten.
+        </p>
+        <p class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          Made with care in Osnabrück
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

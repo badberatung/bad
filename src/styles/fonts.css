@@ -1,0 +1,43 @@
+/* ============================================
+   LOKALE SCHRIFTARTEN - DSGVO-KONFORM
+   ============================================
+   Platziere die WOFF2-Dateien in /public/fonts/
+   und entferne die Kommentare unten.
+   
+   Empfohlene Schrift: Inter (Google Fonts)
+   Download: https://fonts.google.com/specimen/Inter
+   ============================================ */
+
+/* @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-bold.woff2') format('woff2');
+} */
+
+/* Fallback: System-Font-Stack wird von Tailwind bereitgestellt */
