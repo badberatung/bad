@@ -2,10 +2,6 @@ backend:
   name: git-gateway
   repo: badberatung/bad
   branch: master
-  commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}""
 
 # Für lokale Entwicklung (npm run dev + npx decap-server)
 local_backend: true
