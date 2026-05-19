@@ -1,0 +1,283 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}""
+
+# Für lokale Entwicklung (npm run dev + npx decap-server)
+local_backend: true
+
+# Bilder
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Sprache
+cms_manual_init: false
+
+# Collections
+collections:
+  # ───────────────────────────────────────────
+  # GLOBALE EINSTELLUNGEN
+  # ───────────────────────────────────────────
+  - name: "site"
+    label: "⚙️ Globale Einstellungen"
+    description: "Kontaktdaten, Logo, Öffnungszeiten, Cookie-Banner – werden auf allen Seiten verwendet"
+    editor:
+      preview: false
+    files:
+      - file: "src/data/site.json"
+        label: "Kontakt & Allgemeines"
+        name: "settings"
+        fields:
+          - label: "Firmenname"
+            name: "company_name"
+            widget: "string"
+          - label: "Inhaber"
+            name: "owner_name"
+            widget: "string"
+          - label: "Firmenbeschreibung (Footer)"
+            name: "company_description"
+            widget: "text"
+          - label: "Telefon (Anzeige)"
+            name: "phone"
+            widget: "string"
+          - label: "Telefon (Link, mit +49)"
+            name: "phone_link"
+            widget: "string"
+          - label: "E-Mail"
+            name: "email"
+            widget: "string"
+          - label: "Straße"
+            name: "street"
+            widget: "string"
+          - label: "PLZ"
+            name: "zip"
+            widget: "string"
+          - label: "Stadt"
+            name: "city"
+            widget: "string"
+          - label: "Land"
+            name: "country"
+            widget: "string"
+          - label: "Öffnungszeiten"
+            name: "opening_hours"
+            widget: "string"
+          - label: "Öffnungszeiten Hinweis"
+            name: "opening_hours_note"
+            widget: "string"
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+          - label: "Logo Alt-Text"
+            name: "logo_alt"
+            widget: "string"
+          - label: "Header CTA Label"
+            name: "header_cta_label"
+            widget: "string"
+          - label: "Cookie-Banner Titel"
+            name: "cookie_title"
+            widget: "string"
+          - label: "Cookie-Banner Text"
+            name: "cookie_text"
+            widget: "text"
+          - label: "Schema.org Beschreibung"
+            name: "schema_description"
+            widget: "text"
+          - label: "Copyright Text"
+            name: "copyright_text"
+            widget: "string"
+          - label: "Footer 'Made in' Text"
+            name: "footer_made_in"
+            widget: "string"
+
+  # ───────────────────────────────────────────
+  # STARTSEITE
+  # ───────────────────────────────────────────
+  - name: "homepage"
+    label: "🏠 Startseite"
+    description: "Alle Inhalte der Startseite"
+    editor:
+      preview: false
+    files:
+      - file: "src/data/homepage.json"
+        label: "Inhalte"
+        name: "content"
+        fields:
+          # SEO
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Seitentitel", name: "title", widget: "string" }
+              - { label: "Meta-Beschreibung", name: "description", widget: "text" }
+
+          # HERO
+          - label: "Hero Bereich"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge Text", name: "badge", widget: "string" }
+              - { label: "Titel (HTML erlaubt)", name: "title", widget: "string" }
+              - { label: "Untertitel", name: "subtitle", widget: "text" }
+              - { label: "CTA Anrufen", name: "cta_call", widget: "string" }
+              - { label: "CTA Nachricht", name: "cta_message", widget: "string" }
+              - { label: "Hero Bild", name: "image", widget: "image" }
+              - { label: "Hero Bild Alt-Text", name: "image_alt", widget: "string" }
+              - { label: "Floating Badge Label", name: "floating_badge_label", widget: "string" }
+              - { label: "Floating Badge Wert", name: "floating_badge_value", widget: "string" }
+              - label: "Trust Indikatoren"
+                name: "trust_items"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+
+          # VORTEILE
+          - label: "Vorteile Section"
+            name: "vorteile"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - label: "Karten"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Bild", name: "image", widget: "image" }
+                  - { label: "Bild Alt-Text", name: "image_alt", widget: "string" }
+                  - { label: "Titel", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Check Text", name: "check", widget: "string" }
+
+          # FEATURES
+          - label: "Zusätzliche Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "string" }
+
+          # ZUSCHUSS
+          - label: "Zuschuss Section"
+            name: "zuschuss"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung (HTML erlaubt)", name: "description", widget: "text" }
+              - label: "Schritte"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Nummer", name: "number", widget: "number" }
+                  - { label: "Titel", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+              - { label: "Bild", name: "image", widget: "image" }
+              - { label: "Bild Alt-Text", name: "image_alt", widget: "string" }
+              - { label: "Info Box Titel", name: "info_title", widget: "string" }
+              - label: "Info Box Punkte"
+                name: "info_items"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+              - { label: "CTA Text", name: "cta_text", widget: "string" }
+
+          # ÜBER MICH
+          - label: "Über mich Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Portrait Bild", name: "image", widget: "image" }
+              - { label: "Portrait Alt-Text", name: "image_alt", widget: "string" }
+              - label: "Textabsätze"
+                name: "paragraphs"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "text" }
+              - label: "Qualifikationen"
+                name: "qualifications"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+
+          # KONTAKT
+          - label: "Kontakt Section"
+            name: "kontakt"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - { label: "Formular Titel", name: "form_title", widget: "string" }
+              - { label: "Telefon Label", name: "phone_label", widget: "string" }
+              - { label: "Telefon Beschreibung", name: "phone_description", widget: "string" }
+              - { label: "E-Mail Label", name: "email_label", widget: "string" }
+              - { label: "E-Mail Beschreibung", name: "email_description", widget: "string" }
+              - { label: "Adresse Label", name: "address_label", widget: "string" }
+              - { label: "Adresse Beschreibung", name: "address_description", widget: "string" }
+
+          # ABSCHLUSS CTA
+          - label: "Abschluss CTA"
+            name: "final_cta"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "button_text", widget: "string" }
+
+  # ───────────────────────────────────────────
+  # ZUSATZSEITEN (Markdown)
+  # ───────────────────────────────────────────
+  - name: "pages"
+    label: "📄 Zusatzseiten"
+    description: "Impressum, Datenschutz, Danke und 404"
+    editor:
+      preview: false
+    files:
+      - file: "src/content/pages/impressum.md"
+        label: "Impressum"
+        name: "impressum"
+        fields:
+          - { label: "SEO Titel", name: "title", widget: "string" }
+          - { label: "SEO Beschreibung", name: "description", widget: "text" }
+          - { label: "Überschrift", name: "heading", widget: "string" }
+          - { label: "Unterüberschrift", name: "subheading", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - file: "src/content/pages/datenschutz.md"
+        label: "Datenschutz"
+        name: "datenschutz"
+        fields:
+          - { label: "SEO Titel", name: "title", widget: "string" }
+          - { label: "SEO Beschreibung", name: "description", widget: "text" }
+          - { label: "Überschrift", name: "heading", widget: "string" }
+          - { label: "Unterüberschrift", name: "subheading", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - file: "src/content/pages/danke.md"
+        label: "Danke-Seite"
+        name: "danke"
+        fields:
+          - { label: "SEO Titel", name: "title", widget: "string" }
+          - { label: "SEO Beschreibung", name: "description", widget: "text" }
+          - { label: "Überschrift", name: "heading", widget: "string" }
+          - { label: "Unterüberschrift", name: "subheading", widget: "string" }
+          - { label: "Textabsatz 1", name: "paragraph_1", widget: "text" }
+          - { label: "Textabsatz 2", name: "paragraph_2", widget: "text" }
+          - { label: "Button Startseite", name: "button_home", widget: "string" }
+          - { label: "Button Anrufen", name: "button_call", widget: "string" }
+
+      - file: "src/content/pages/404.md"
+        label: "404-Fehlerseite"
+        name: "notfound"
+        fields:
+          - { label: "SEO Titel", name: "title", widget: "string" }
+          - { label: "SEO Beschreibung", name: "description", widget: "text" }
+          - { label: "Überschrift (Zahl)", name: "heading_number", widget: "string" }
+          - { label: "Unterüberschrift", name: "subheading", widget: "string" }
+          - { label: "Text", name: "body", widget: "text" }
+          - { label: "Button Text", name: "button_text", widget: "string" }

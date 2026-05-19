@@ -1,5 +1,6 @@
 ---
 // Header Komponente - Sticky mit großem Telefon-CTA
+import site from '../data/site.json';
 ---
 
 <header class="sticky top-0 z-50 bg-white shadow-md" role="banner">
@@ -10,12 +11,12 @@
       <a 
         href="/" 
         class="flex items-center transition-opacity hover:opacity-80"
-        aria-label="Barrierefreie Badberatung - Zur Startseite"
+        aria-label={`${site.company_name} - Zur Startseite`}
       >
         <!-- Logo Bild -->
         <img 
-          src="/images/logo.png" 
-          alt="Barrierefreie Badberatung Logo"
+          src={site.logo} 
+          alt={site.logo_alt}
           class="h-14 lg:h-16 w-auto object-contain"
           width="200"
           height="64"
@@ -25,9 +26,9 @@
       <!-- Haupt-CTA: Telefonnummer -->
       <div class="flex items-center">
         <a 
-          href="tel:+4954180067046" 
+          href={`tel:${site.phone_link}`} 
           class="group flex items-center gap-3 bg-secondary hover:bg-secondary-dark text-white px-5 py-3 lg:px-6 lg:py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl min-h-touch"
-          aria-label="Jetzt anrufen: 0541 80067046"
+          aria-label={`Jetzt anrufen: ${site.phone}`}
         >
           <!-- Telefon Icon -->
           <svg 
@@ -47,10 +48,10 @@
           
           <div class="text-left">
             <span class="hidden lg:block text-xs lg:text-sm opacity-90 font-medium">
-              Kostenlos beraten lassen
+              {site.header_cta_label}
             </span>
             <span class="block text-xl lg:text-2xl font-bold tracking-wide">
-              0541 80067046
+              {site.phone}
             </span>
           </div>
         </a>

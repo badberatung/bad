@@ -6,6 +6,8 @@ export interface Props {
 
 const { title, description } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://barrierefrei-badberatung.de');
+
+import site from '../data/site.json';
 ---
 
 <!DOCTYPE html>
@@ -24,7 +26,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://barriere
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
-    <meta property="og:site_name" content="Barrierefreie Badberatung" />
+    <meta property="og:site_name" content={site.company_name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
@@ -50,20 +52,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://barriere
     <link rel="stylesheet" href="/src/styles/fonts.css" />
     
     <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
+    <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Barrierefreie Badberatung",
-      "description": "Professionelle Beratung für barrierefreie Badsanierung in Osnabrück und Umgebung",
+      "name": site.company_name,
+      "description": site.schema_description,
       "url": "https://barrierefrei-badberatung.de",
-      "telephone": "+4954180067046",
-      "email": "Info@barrierefrei-badberatung.de",
+      "telephone": site.phone_link,
+      "email": site.email,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "In der Dodesheide 2",
-        "addressLocality": "Osnabrück",
-        "postalCode": "49088",
+        "streetAddress": site.street,
+        "addressLocality": site.city,
+        "postalCode": site.zip,
         "addressCountry": "DE"
       },
       "geo": {
@@ -78,8 +79,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://barriere
       "priceRange": "$$",
       "openingHours": "Mo-Fr 08:00-18:00",
       "image": "/images/logo.jpg"
-    }
-    </script>
+    })} />
     
     <style is:global>
       /* Base Styles für Senioren-Gerechtigkeit */
@@ -197,6 +197,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://barriere
           scroll-behavior: auto !important;
         }
       }
+
+      /* Prose Custom Colors für Markdown-Seiten */
+      .prose-custom h1, .prose-custom h2, .prose-custom h3, .prose-custom h4 {
+        color: #1c3867;
+      }
+      .prose-custom a {
+        color: #449c9d;
+      }
+      .prose-custom a:hover {
+        text-decoration: underline;
+      }
+      .prose-custom strong {
+        color: #1c3867;
+      }
     </style>
   </head>
   
@@ -211,10 +225,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://barriere
     <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
       <div class="cookie-banner-content">
         <div class="cookie-banner-text">
-          <h2 id="cookie-title" class="text-lg font-bold mb-1">Datenschutzeinstellungen</h2>
+          <h2 id="cookie-title" class="text-lg font-bold mb-1">{site.cookie_title}</h2>
           <p id="cookie-desc" class="text-base opacity-90">
-            Wir verwenden nur essentielle Cookies, die für den Betrieb dieser Website notwendig sind. 
-            Personenbezogene Daten werden nur bei aktiver Kontaktaufnahme erhoben.
+            {site.cookie_text}
           </p>
         </div>
         <div class="cookie-banner-buttons">

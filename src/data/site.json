@@ -1,0 +1,22 @@
+{
+  "company_name": "Barrierefreie Badberatung",
+  "company_description": "Ihr zuverlässiger Partner für barrierefreie Badsanierung in Osnabrück und Umgebung. Wir helfen Ihnen, Ihr Bad sicher und komfortabel zu gestalten – mit bis zu 4.180 € Zuschuss von der Pflegekasse.",
+  "owner_name": "Alex Reimer",
+  "phone": "0541 80067046",
+  "phone_link": "+4954180067046",
+  "email": "Info@barrierefrei-badberatung.de",
+  "street": "In der Dodesheide 2",
+  "zip": "49088",
+  "city": "Osnabrück",
+  "country": "Deutschland",
+  "opening_hours": "Mo – Fr: 08:00 – 18:00 Uhr",
+  "opening_hours_note": "Termine nach Vereinbarung",
+  "logo": "/images/logo.png",
+  "logo_alt": "Barrierefreie Badberatung Logo",
+  "header_cta_label": "Kostenlos beraten lassen",
+  "cookie_title": "Datenschutzeinstellungen",
+  "cookie_text": "Wir verwenden nur essentielle Cookies, die für den Betrieb dieser Website notwendig sind. Personenbezogene Daten werden nur bei aktiver Kontaktaufnahme erhoben.",
+  "schema_description": "Professionelle Beratung für barrierefreie Badsanierung in Osnabrück und Umgebung",
+  "copyright_text": "© {year} Barrierefreie Badberatung. Alle Rechte vorbehalten.",
+  "footer_made_in": "Made with care in Osnabrück"
+}

@@ -1,0 +1,136 @@
+{
+  "seo": {
+    "title": "Barrierefreie Badberatung Osnabrück | Sicherheit & Komfort im eigenen Bad",
+    "description": "Professionelle Beratung für barrierefreie Badsanierung in Osnabrück. Bodengleiche Duschen, Haltegriffe, rutschfeste Böden – mit bis zu 4.180 € Pflegekassenzuschuss. Kostenlose Erstberatung!"
+  },
+  "hero": {
+    "badge": "Bis zu 4.180 € Pflegekassenzuschuss möglich!",
+    "title": "Sicherheit & Komfort <span class=\"text-secondary\">im eigenen Bad</span>",
+    "subtitle": "Barrierefreie Badmodernisierung für ein selbstbestimmtes Leben. Wir machen Ihr Bad sicher – damit Sie lange selbstständig zu Hause leben können.",
+    "cta_call": "Jetzt anrufen",
+    "cta_message": "Nachricht schreiben",
+    "image": "/images/hero.png",
+    "image_alt": "Modernes, barrierefreies Badezimmer mit bodengleicher Dusche und Haltegriffen",
+    "floating_badge_label": "Zufriedene Kunden",
+    "floating_badge_value": "100+",
+    "trust_items": [
+      { "text": "Kostenlose Beratung" },
+      { "text": "Persönlich vor Ort" },
+      { "text": "Zuschuss-Abwicklung" },
+      { "text": "3D Planung" },
+      { "text": "KW Fördermöglichkeit" }
+    ]
+  },
+  "vorteile": {
+    "label": "Unsere Lösungen",
+    "title": "Ihr Bad – sicher und barrierefrei",
+    "description": "Stolpern in der Dusche, Angst beim Ein- und Aussteigen – das muss nicht sein. Wir zeigen Ihnen, wie Ihr Bad wieder ein Ort der Entspannung wird.",
+    "cards": [
+      {
+        "image": "/images/Bodengleich.jpg",
+        "image_alt": "Bodengleiche Dusche statt Badewanne",
+        "title": "Bodengleiche Dusche statt Badewanne",
+        "text": "Keine hohen Einstiege mehr. Eine ebenerdige Dusche ermöglicht einen sicheren, stolperfreien Zugang – perfekt für Rollator und Rollstuhl. Wir machen aus Ihrer Badewanne eine bodengleiche Dusche.",
+        "check": "Einfacher Einstieg"
+      },
+      {
+        "image": "/images/rutschfest.jpg",
+        "image_alt": "Rutschfeste Materialien",
+        "title": "Rutschfeste Materialien",
+        "text": "Spezielle Fliesen und Bodenbeläge mit Rutschhemmung R10/R11 sorgen für sicheren Halt – auch bei Seifenwasser. Moderne Designs, die Sicherheit mit Ästhetik verbinden.",
+        "check": "Sicherer Halt garantiert"
+      },
+      {
+        "image": "/images/Haltegriffe.jpg",
+        "image_alt": "Haltegriffe und Sicherheit",
+        "title": "Haltegriffe & Sicherheit",
+        "text": "Strategisch platzierte Haltegriffe geben Halt beim Duschen und Toilettengang. Klappbar oder fest montiert – wir finden die beste Lösung für Ihren Alltag.",
+        "check": "Mehr Selbstständigkeit"
+      }
+    ]
+  },
+  "features": [
+    {
+      "title": "Höhenverstellbare Waschtische",
+      "description": "Bequem im Sitzen oder Stehen"
+    },
+    {
+      "title": "Duschabtrennung faltbar",
+      "description": "Mehr Platz beim Duschen durch faltbare Duschabtrennung"
+    },
+    {
+      "title": "Mehr Komfort und Sicherheit bei der Toilettennutzung",
+      "description": "Versetzen und erhöhen der Toilette für ergonomisches Sitzen"
+    }
+  ],
+  "zuschuss": {
+    "badge": "Staatliche Förderung nutzen",
+    "title": "Bis zu 4.180 € Zuschuss von der Pflegekasse",
+    "description": "Wussten Sie, dass die Pflegekasse bei einer wohnumfeldverbessernden Maßnahme <strong class=\"text-primary\">bis zu 4.180 € pro Person</strong> bezuschusst? Das ist kein Darlehen – Sie müssen nichts zurückzahlen!",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Pflegegrad prüfen lassen",
+        "text": "Sie oder Ihr Angehöriger benötigen mindestens Pflegegrad 1. Falls noch nicht vorhanden, helfe ich bei der Beantragung."
+      },
+      {
+        "number": 2,
+        "title": "Kostenlose Beratung",
+        "text": "Ich besuche Sie vor Ort, begutachte Ihr Bad und erstelle ein unverbindliches Konzept."
+      },
+      {
+        "number": 3,
+        "title": "Antrag einreichen",
+        "text": "Ich helfe Ihnen bei der korrekten Ausfüllung aller Formulare und reiche den Antrag bei Ihrer Pflegekasse ein."
+      },
+      {
+        "number": 4,
+        "title": "Zuschuss erhalten & loslegen",
+        "text": "Nach Bewilligung durch die Pflegekasse wird der Zuschuss direkt an Sie ausgezahlt."
+      }
+    ],
+    "image": "/images/beratung.png",
+    "image_alt": "Beratungsgespräch zur Pflegekassenzuschuss-Beantragung",
+    "info_title": "Wichtig zu wissen:",
+    "info_items": [
+      { "text": "Der Zuschuss gilt pro pflegebedürftiger Person im Haushalt" },
+      { "text": "Auch für Ehepartner/Angehörige mit Pflegegrad" },
+      { "text": "KW Zuschüsse (455-B) können beantragt werden" }
+    ],
+    "cta_text": "Gratis beraten lassen"
+  },
+  "about": {
+    "label": "Ihr Ansprechpartner vor Ort",
+    "title": "Ihr Berater in Osnabrück",
+    "image": "/images/uberuns.jpg",
+    "image_alt": "Barrierefreie Badberatung in Osnabrück - Professionelle Badsanierung mit Pflegekassenzuschuss",
+    "paragraphs": [
+      "Herzlich willkommen! Ich helfe Senioren und pflegebedürftigen Menschen in Osnabrück und Umgebung dabei, ihr Bad sicher und komfortabel zu gestalten.",
+      "Bei mir erwarten Sie eine ehrliche Beratung. Ich nehme mir Zeit, höre Ihnen zu und entwickle gemeinsam mit Ihnen die beste Lösung für Ihre Situation.",
+      "Ich bin als Vermittler tätig und vermittle passende Anbieter.",
+      "Nach jahrelanger Erfahrung im Baugewerbe habe ich mich auf die Bedürfnisse älterer Menschen spezialisiert. Ich weiß, wie wichtig es ist, trotz körperlicher Einschränkungen selbstbestimmt zu Hause leben zu können."
+    ],
+    "qualifications": [
+      { "text": "Ihr Experte für Zuschüsse" },
+      { "text": "100+ zufriedene Kunden" },
+      { "text": "Lokal & Persönlich" }
+    ]
+  },
+  "kontakt": {
+    "label": "Kontakt",
+    "title": "Lassen Sie uns sprechen",
+    "description": "Rufen Sie mich direkt an oder schreiben Sie mir eine Nachricht. Ich melde mich innerhalb von 24 Stunden bei Ihnen.",
+    "form_title": "Nachricht schreiben",
+    "phone_label": "Telefon",
+    "phone_description": "Direkt und unkompliziert erreichen",
+    "email_label": "E-Mail",
+    "email_description": "Ich antworte innerhalb von 24h",
+    "address_label": "Adresse",
+    "address_description": "Ihr lokaler Ansprechpartner"
+  },
+  "final_cta": {
+    "title": "Bereit für ein sicheres Bad?",
+    "text": "Nutzen Sie die kostenlose Erstberatung und erfahren Sie, wie auch Ihr Bad barrierefrei werden kann.",
+    "button_text": "0541 80067046"
+  }
+}
